@@ -1,5 +1,20 @@
 # Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Виконувані файли Windows/Linux/Mac
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.out
+*.app
+
+# PDB, DB, кеші
+*.pdb
+*.obj
+*.cache
+*.db
+*.log
 # User-specific files
 *.rsuser
 *.suo
