@@ -2,41 +2,35 @@
 {
     static void Main(string[] args)
     {
-        Circle circle = new Circle("MyCircle", 5);
-        Console.WriteLine(circle.GetArea());
+        Student st1 = new Student(3, "Kuzmych Serhii", new int[] { 5, 4, 3, 5, 4 });
+        st1.PrintCard();
+        Student st2 = new Student(1, "Denisevich Ivan", new int[] { 5, 5, 5, 5, 3 });
+        st2.PrintCard();
+
         Console.ReadKey();
     }
 }
-abstract class Figure
+
+class Student
 {
+    private int _id;
     private string _name;
-    public string Name
+    public double AverageMark { get; set; }
+
+    public Student(int id, string name, int[] marks)
     {
-        get { return _name; }
-        set { _name = value; }
-    }
-    public Figure(string name)
-    {
+        this._id = id;
         this._name = name;
+        AverageMark = marks.Average();
     }
-    ~Figure()
+    public void PrintCard()
     {
-        Console.WriteLine("Destructor called");
+        Console.WriteLine($"ID - {this._id}, Name - {this._name}, Average Mark - {AverageMark}");
     }
-    public virtual double GetArea()
+    ~Student()
     {
-        return 0;
+        Console.WriteLine($"Student {_name} is deleted");
     }
 }
-class Circle : Figure
-{
-    private double _radius;
-    public Circle(string name, double radius) : base(name)
-    {
-        this._radius = radius;
-    }
-    public override double GetArea()
-    {
-        return Math.PI * _radius * _radius;
-    }
-}
+
+

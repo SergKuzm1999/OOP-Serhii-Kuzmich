@@ -12,3 +12,4 @@ C:\Users\Serg\Desktop\OPP-Serhii-Kuzmich\lab 1\lab_1\obj\Debug\net10.0\refint\la
 C:\Users\Serg\Desktop\OPP-Serhii-Kuzmich\lab 1\lab_1\obj\Debug\net10.0\lab_1.pdb
 C:\Users\Serg\Desktop\OPP-Serhii-Kuzmich\lab 1\lab_1\obj\Debug\net10.0\lab_1.genruntimeconfig.cache
 C:\Users\Serg\Desktop\OPP-Serhii-Kuzmich\lab 1\lab_1\obj\Debug\net10.0\ref\lab_1.dll
+C:\Users\Serg\Desktop\OPP-Serhii-Kuzmich\lab 1\lab_1\obj\Debug\net10.0\lab_1.sourcelink.json
