@@ -51,6 +51,10 @@
             double MER = RER * CoefficientActivity;   // добова норма з активністю
             return MER;
         }
+        ~Animal()
+        {
+            Console.WriteLine("Destroy Animal");
+        }
     }
     class Dog : Animal
     {
