@@ -64,6 +64,10 @@
         {
             return "Woof!";
         }
+        ~Dog()
+        {
+            Console.WriteLine("Destroy Dog");
+        }
     }
     class Cat : Animal
     {
@@ -72,6 +76,10 @@
         public override string Speak()
         {
             return "Meow!";
+        }
+        ~Cat()
+        {
+            Console.WriteLine("Destroy Cay");
         }
     }
 }
