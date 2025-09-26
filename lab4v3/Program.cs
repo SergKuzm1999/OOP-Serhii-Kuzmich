@@ -19,7 +19,7 @@
         Console.WriteLine($"Початковий текст: {text}");
         Console.WriteLine("Результат:");
         Console.WriteLine(filteredText);
-        Console.WriteLine("Кількість змін" + totalChanges);
+        Console.WriteLine("Кількість змін: " + totalChanges);
     }
 }
 // Базовий інтерфейс
