@@ -31,7 +31,6 @@ interface ITextFilter
 // Базовий клас для фільтрів
 abstract class TextFilterBase : ITextFilter
 {
-    protected int changesCount = 0;
     public int ChangesCount { get; set; }
 
     public abstract string ActionByText(string text);
@@ -64,7 +63,11 @@ class CensorWordsFilter : TextFilterBase
         {
             // Заміна слова на зірочки
             result = result.Replace(word, new string('*', word.Length));
-            ChangesCount += word.Length;
+        }
+        for (int i = 0; i < result.Length; i++)
+        {
+            if(result[i] == '*')
+                ChangesCount++;
         }
         return result;
     }
