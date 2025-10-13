@@ -11,7 +11,7 @@ class Program
         try
         {
             accounts.Add(acc1);
-            
+
             Console.WriteLine($"\nБаланс {acc1.Owner}: {acc1.Balance:C}");
             // Поповнення рахунку
             var depositResult = acc1.Deposit(1500);;
@@ -93,12 +93,8 @@ public class Transaction
 
     public override string ToString()
     {
-        if (Type == "Withdraw")
-            return $"{Date:g} | {Type} | - {Amount:0.00} ₴";
-        if (Type == "Deposit")
-            return $"{Date:g} | {Type} | + {Amount:0.00} ₴";
-        else
-            return $"{Date:g} | {Type} | {Amount:0.00} ₴";
+        string sign = Type == "Withdraw" ? "-" : Type == "Deposit" ? "+" : "";
+        return $"{Date:g} | {Type,-10} | {sign} {Amount:0.00} ₴";
     }
 }
 public class Account
